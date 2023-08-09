@@ -1,0 +1,445 @@
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+a {
+    color: #754b03;
+    text-decoration: none;
+}
+
+
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0px;
+    background-color: #fdfaef;
+}
+
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    background-color: #F2EAD3;
+    box-shadow: 1px 2px 6px #F2EAD3;
+}
+
+.logo-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-section img {
+    position: relative;
+    width: auto;
+    height: 70px;
+    left: 50px;
+}
+
+.nav {
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #F2EAD3;
+    position: absolute;
+    margin-top: -20px;
+    list-style: none;
+    font-size: 24px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.nav li a{
+    font-size: 20px;
+    display: block;
+    width: calc(100% - 10px);
+    border-bottom: 1px solid #754b03;
+    transition: width 5s ease;
+}
+
+li a:hover {
+    letter-spacing: 2px;
+    transition: .2s ease-out;
+    color: #754b03;
+}
+
+.menu-btn {
+    padding-right: 30px;
+    align-self: center;
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    position: relative;
+    color:#754b03;
+}
+
+/* Hide the checkbox */
+#menu-checkbox {
+    display: none;
+}
+
+/* Show the menu when the checkbox is checked */
+#menu-checkbox:checked ~ .nav {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s ease;
+}
+
+.intro {
+    background-image: url(logo/bg.jpg);
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro h1{
+    color:rgba(240, 214, 162, 0.923);
+    font-size: 56px;
+    mix-blend-mode: difference screen;
+    text-shadow: 0.5px 0.5px 0px #472e02,
+    1px 1px 0px #343434, 
+    1.5px 1.5px 0px #343434,
+    2px 2px 0px #343434,
+    2.5px 2.5px 0px #343434,
+    3px 3px 0px #343434,
+    3.5px 3.5px 0px #343434;
+}
+.intro p {
+    color:rgb(237, 212, 178);
+    font-size: 24px;
+    font-weight: 500;
+    mix-blend-mode: difference color;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+
+.category {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.title {
+    display: inline;
+    color: #754b03;
+    letter-spacing: 2px;
+    font-size: 30px;
+    text-align: center;
+    transition: .4s ease-in-out;
+}
+
+div > p {
+    font-size: 20px;
+}
+
+hr {
+    border: 0.5px solid #754b03;
+    width: 20%;
+    opacity: 100%;
+}
+
+.title a:hover{
+    letter-spacing: 3px;
+    transition: .4s ease-in-out;
+    color: #bd9661;
+}
+
+.title a:hover + hr{
+    transition: .4s ease-in-out;
+    width: 200px;
+    border-color: #bd9661;
+}
+
+.book-container {
+    display: inline-grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-row-gap: 40px;
+    justify-items: center;
+    align-items: center;
+    color:#472e02
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book .img-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.book .img-container img {
+    border-radius: 3px;
+    width: 90%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 400px;
+}
+
+
+
+.book-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.book-category {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    color: rgb(248, 201, 146);
+}
+
+.book-name {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Authors {
+    margin-bottom: 10px;
+    font-weight: 100;
+    font-size: 15px;
+    color:#754b03;
+}
+
+.book-price {
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+    color:#754b03;
+}
+
+.book button {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    color: rgb(92, 55, 7);
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 0px;
+    padding: 10px 20px;
+    background-color: #F2EAD3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book button:hover {
+    background-color: rgba(219, 167, 107, 0.5);
+    transition: .3s ease-in-out;
+    position: relative;
+    transform: translateY(3px);
+    box-shadow: 0 1px 2px #472e02;
+}
+
+.video-box-container {
+    display: flex;
+    align-items: center;
+    border: 0px;
+    padding: 20px;
+    margin: 0 auto;
+    color:#754b03;
+    background-color: #F2EAD3;
+  }
+.quote {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .box-container .video {
+    flex: 1;
+    padding: 0 20px;
+  }
+  .video iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+footer {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #DFD7BF;
+}
+
+.footer-logo img{
+    width: 150px;
+    height: auto;
+    margin: 20px 0px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    width: 70%;
+}
+
+.footer-nav a{
+    width: fit-content;
+}
+
+.footer-social {
+    margin-top: 20px;
+    width: 70%;
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+}
+
+.footer-social a:hover {
+    transition: .3s ease-in-out;
+    transform: translateY(-5px);
+    color: #9b5603;
+}
+
+@media (max-width:550px) {
+    .book .img-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .book .img-container img {
+        width: 90%;
+        height: 100%;
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .book-category {
+        font-size: 14px;
+    }
+    
+    .book-name {
+        font-size: 20px;
+    }
+    
+    .book-price {
+        font-size: 14px;
+        font-family: 'Heebo', sans-serif;
+        font-weight: bold;
+    }
+
+    .book button {
+        font-size: 14px;
+    }
+    
+}
+
+@media (max-width:420px) {
+    .book-container {
+        padding: 0 20px;
+        grid-template-columns: repeat(1, minmax(0, 1fr));  
+    }
+
+
+    .book .img-container img {
+        width: 90%;
+        height: 100%;
+    }
+
+}
+
+@media (max-width: 768px){
+    .video-box-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width:991px){
+    .book-container {
+        padding: 0 20px;
+        flex-wrap: wrap; 
+    }
+
+
+    .book .img-container img {
+        max-height: 250px;
+        width: 100%;
+        height: 100%;
+    }
+    .video-box-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 991px) {
+    .book-container {
+        padding: 0 20px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));  
+    }
+
+    .book .img-container img {
+        max-height: 350px;
+        width: calc(100% - 10px);
+        height: 100%;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        visibility: visible;
+        opacity: 1;
+        position: static;
+        gap: 40px;
+        margin: 0;
+    }
+    
+    .nav li a{
+        white-space: nowrap;
+        width: 100%;
+        border: none;
+        transition: .3s ease;
+    }
+
+    li a:hover {
+        letter-spacing: 2px;
+        transition: .3s ease-out;
+        border-bottom: 1px solid rgba(219, 167, 107, 0.5);
+    }
+
+    
+}

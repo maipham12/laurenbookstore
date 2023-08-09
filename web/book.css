@@ -1,0 +1,366 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+a {
+    color: #754b03;
+    text-decoration: none;
+}
+
+
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0px;
+    background-color: #fdfaef;
+}
+
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    background-color: #F2EAD3;
+    box-shadow: 1px 2px 6px #F2EAD3;
+}
+
+.logo-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-section img {
+    position: relative;
+    width: auto;
+    height: 70px;
+    left: 50px;
+}
+
+.nav {
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #F2EAD3;
+    position: absolute;
+    margin-top: -20px;
+    list-style: none;
+    font-size: 24px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.nav li a{
+    font-size: 20px;
+    display: block;
+    width: calc(100% - 10px);
+    border-bottom: 1px solid #754b03;
+    transition: width 5s ease;
+}
+
+li a:hover {
+    letter-spacing: 2px;
+    transition: .2s ease-out;
+    color: #754b03;
+}
+
+.menu-btn {
+    padding-right: 30px;
+    align-self: center;
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    position: relative;
+    color:#754b03;
+}
+
+/* Hide the checkbox */
+#menu-checkbox {
+    display: none;
+}
+
+/* Show the menu when the checkbox is checked */
+#menu-checkbox:checked ~ .nav {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s ease;
+}
+
+
+.introduction p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+
+.introduction a {
+    margin-right: 5px;
+}
+
+hr {
+    border: 0.5px solid #754b03;
+    width: 20%;
+    opacity: 100%;
+    margin-bottom: 50px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    gap: 20%;
+    padding: 0px 200px;
+    flex-wrap: wrap;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.book-img {
+    display: flex;
+    margin-right:30px;
+}
+
+.small-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.small-img img {
+    height: 150px; 
+    width: auto; 
+}
+
+.info {
+    color: #754b03;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.book-price {
+    font-size: 20px;
+}
+.book-button {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    color: rgb(92, 55, 7);
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 0px;
+    padding: 10px 20px;
+    background-color: #F2EAD3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+    color: #754b03;
+    margin: 50px 200px 100px 200px;
+}
+
+.book-name h1 {
+    font-size: 34px;
+}
+.book-name h2 {
+    font-weight: 100;
+    font-size: 20px;
+}
+.book-name hr {
+    border: 0.5px solid #754b03;
+    width: 100%;
+    opacity: 100%;
+    margin: 0px;
+}
+
+
+footer {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #DFD7BF;
+}
+
+.footer-logo img{
+    width: 150px;
+    height: auto;
+    margin: 20px 0px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    width: 70%;
+}
+
+.footer-nav a{
+    width: fit-content;
+}
+
+.footer-social {
+    margin-top: 20px;
+    width: 70%;
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+}
+
+.footer-social a:hover {
+    transition: .3s ease-in-out;
+    transform: translateY(-5px);
+    color: #bd8341;
+}
+
+@media (min-width: 991px) {
+    .menu-btn {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        visibility: visible;
+        opacity: 1;
+        position: static;
+        gap: 40px;
+        margin: 0;
+    }
+    
+    .nav li a{
+        white-space: nowrap;
+        width: 100%;
+        border: none;
+        transition: .3s ease;
+    }
+
+    li a:hover {
+        letter-spacing: 2px;
+        transition: .3s ease-out;
+        border-bottom: 1px solid rgba(219, 167, 107, 0.5);
+    }
+    
+}
+
+@media (max-width:768px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        gap: 0%;
+        padding: 0px;
+        flex-wrap: wrap;
+        }
+    .img-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .book-img {
+        display: flex;
+        margin-bottom:20px;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .small-img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .small-img img {
+        height: auto; 
+        width: 110px; 
+        padding: 15px;
+    }
+    
+    .info {
+        color: #754b03;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .details {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        gap: 0%;
+        padding: 0px;
+        flex-wrap: wrap;
+        }
+    .img-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .book-img {
+        display: flex;
+        margin-bottom:20px;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .small-img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .small-img img {
+        height: auto; 
+        width: 110px; 
+        padding: 15px;
+    }
+    
+    .info {
+        color: #754b03;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .details {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
